@@ -1,0 +1,84 @@
+.wishlist-page {
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+.wishlist-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.wishlist-header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 12px;
+}
+
+.wishlist-header p {
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+/* Empty State layout */
+.wishlist-empty {
+  max-width: 550px;
+  margin: 40px auto;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.heart-pulse-badge {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-full);
+  background: rgba(236, 72, 153, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  border: 1px solid rgba(236, 72, 153, 0.2);
+  animation: heartPulse 2s ease-in-out infinite;
+}
+
+.empty-heart-icon {
+  width: 32px;
+  height: 32px;
+  color: var(--secondary);
+}
+
+.wishlist-empty h3 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.wishlist-empty p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+@keyframes heartPulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.3); }
+  70% { transform: scale(1.08); box-shadow: 0 0 0 15px rgba(236, 72, 153, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(236, 72, 153, 0); }
+}
+
+@media (max-width: 900px) {
+  .wishlist-grid {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,298 @@
+.contact-page {
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.contact-header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 12px;
+}
+
+.contact-header p {
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* Page Layout */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.contact-form-container {
+  padding: 40px;
+}
+
+.contact-form h3 {
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 12px;
+}
+
+.form-group-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 16px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 16px;
+}
+
+.contact-form label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: white;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  transition: all var(--transition-fast);
+}
+
+.contact-form input {
+  height: 46px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--primary);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.contact-send-btn {
+  height: 48px;
+  width: 100%;
+  margin-top: 16px;
+}
+
+/* Success Confirmation panel */
+.contact-success {
+  text-align: center;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-success .succ-badge {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.1);
+  border: 2px solid var(--success);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+}
+
+.contact-success .succ-icon {
+  width: 32px;
+  height: 32px;
+  color: var(--success);
+}
+
+.contact-success h2 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.contact-success p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 28px;
+  max-width: 450px;
+}
+
+/* Info sidebar Column */
+.contact-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.info-card {
+  padding: 30px;
+}
+
+.info-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 12px;
+}
+
+.contact-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-detail-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.contact-detail-item .det-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contact-detail-item h4 {
+  font-size: 0.95rem;
+  color: white;
+  margin-bottom: 4px;
+}
+
+.contact-detail-item p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* Visual Mockup map card styling */
+.visual-map-card {
+  padding: 0;
+  overflow: hidden;
+  height: 250px;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #0f1423;
+  overflow: hidden;
+}
+
+.map-grid-mesh {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Glowing Pulse Map coordinates */
+.map-dot-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  margin-top: -8px;
+  margin-left: -8px;
+  border-radius: 50%;
+  background: var(--secondary);
+  z-index: 10;
+}
+
+.map-dot-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  margin-left: -25px;
+  border-radius: 50%;
+  border: 2px solid var(--secondary);
+  opacity: 0;
+  animation: mapRadar 2.5s infinite;
+  z-index: 9;
+}
+
+.map-labels {
+  position: absolute;
+  top: calc(50% + 15px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 12;
+  text-align: center;
+  pointer-events: none;
+}
+
+.hq-tag {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: white;
+  background: rgba(11, 15, 25, 0.85);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--secondary);
+}
+
+.hq-loc {
+  font-size: 0.65rem;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.map-compass {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  color: rgba(255, 255, 255, 0.2);
+  z-index: 5;
+}
+
+@keyframes mapRadar {
+  0% { transform: scale(0.3); opacity: 1; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+/* Responsive queries */
+@media (max-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-group-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .contact-form-container {
+    padding: 24px;
+  }
+}

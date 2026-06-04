@@ -1,0 +1,247 @@
+.tours-page-view {
+  padding-top: 120px; /* Offset sticky header */
+  padding-bottom: 80px;
+}
+
+.tours-page-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.tours-page-header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 12px;
+}
+
+.tours-page-header p {
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* Catalog Page Layout grid */
+.tours-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.mobile-filter-toggle {
+  display: none;
+  margin-bottom: 16px;
+}
+
+/* Sidebar Styles */
+.tours-sidebar {
+  padding: 30px 24px;
+  position: sticky;
+  top: 100px;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-header h3 {
+  font-size: 1.25rem;
+  color: white;
+}
+
+.reset-btn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.reset-btn-link:hover {
+  color: var(--secondary);
+}
+
+.sidebar-filter-group {
+  margin-bottom: 24px;
+}
+
+.sidebar-label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 0.05em;
+}
+
+.sidebar-search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-search-icon {
+  position: absolute;
+  left: 12px;
+  color: var(--text-secondary);
+}
+
+.sidebar-search-wrapper input {
+  width: 100%;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: white;
+  padding-left: 38px;
+  padding-right: 12px;
+  font-size: 0.9rem;
+  transition: all var(--transition-fast);
+}
+
+.sidebar-search-wrapper input:focus {
+  border-color: var(--primary);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.price-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.price-bubble {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: rgba(99, 102, 241, 0.1);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.price-range-limits {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: -8px;
+}
+
+.tours-sidebar select {
+  width: 100%;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: white;
+  padding: 0 12px;
+  font-size: 0.9rem;
+  transition: all var(--transition-fast);
+}
+
+.tours-sidebar select:focus {
+  border-color: var(--primary);
+}
+
+.apply-filters-btn {
+  display: none;
+}
+
+/* Catalog list styles */
+.tours-catalog-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog-status {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.results-count {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.tours-page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+/* No results fallback style */
+.no-results-panel {
+  padding: 80px 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+.no-results-icon {
+  margin-bottom: 24px;
+  opacity: 0.6;
+}
+
+.no-results-panel h3 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.no-results-panel p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Responsive Queries */
+@media (max-width: 900px) {
+  .tours-layout {
+    grid-template-columns: 1fr;
+  }
+  .mobile-filter-toggle {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 48px;
+  }
+  .tours-sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1100;
+    background: rgba(6, 9, 19, 0.98);
+    backdrop-filter: blur(20px);
+    overflow-y: auto;
+    border: none;
+    border-radius: 0;
+    padding: 40px 24px;
+  }
+  .tours-sidebar.mobile-open {
+    display: block;
+  }
+  .apply-filters-btn {
+    display: block;
+    margin-top: 32px;
+    height: 48px;
+  }
+  .sidebar-header {
+    margin-top: 20px;
+  }
+}
