@@ -49,6 +49,22 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+.sidebar-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.mobile-filter-close {
+  display: none;
+  color: var(--text-secondary);
+}
+
+.mobile-filter-close:hover {
+  color: var(--secondary);
+}
+
+
 .sidebar-header h3 {
   font-size: 1.25rem;
   color: white;
@@ -243,5 +259,15 @@
   }
   .sidebar-header {
     margin-top: 20px;
+  }
+  .mobile-filter-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
   }
 }

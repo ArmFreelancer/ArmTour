@@ -673,3 +673,55 @@
     font-size: 1.8rem;
   }
 }
+
+@media (max-width: 480px) {
+  .details-hero {
+    height: 320px;
+    padding-bottom: 20px;
+    margin-bottom: 24px;
+  }
+  .details-hero-title {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+  .details-hero-meta {
+    gap: 10px;
+  }
+  .details-hero-meta .meta-item {
+    font-size: 0.85rem;
+    padding: 4px 10px;
+  }
+  .overview-summary {
+    padding: 20px;
+  }
+  .summary-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .inc-exc-box {
+    padding: 20px;
+  }
+  .itinerary-day-header {
+    padding: 16px;
+  }
+  .itinerary-day-body {
+    padding: 0 16px 16px 16px;
+  }
+  .day-title {
+    font-size: 1rem;
+  }
+  .day-badge {
+    margin-right: 10px;
+    font-size: 0.75rem;
+    padding: 3px 8px;
+  }
+  .details-sub-card {
+    padding: 20px;
+  }
+  .details-info-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+

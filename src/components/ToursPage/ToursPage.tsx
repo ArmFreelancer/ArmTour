@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './ToursPage.css';
 import { TourCard } from '../TourCard/TourCard';
 import type { TourPackage } from '../../types';
-import { Search, SlidersHorizontal, RefreshCw, AlertCircle } from 'lucide-react';
+import { Search, SlidersHorizontal, RefreshCw, AlertCircle, X } from 'lucide-react';
+
 
 interface ToursPageProps {
   tours: TourPackage[];
@@ -84,11 +85,17 @@ export const ToursPage: React.FC<ToursPageProps> = ({
         <aside className={`tours-sidebar glass-panel ${showFiltersMobile ? 'mobile-open' : ''}`}>
           <div className="sidebar-header">
             <h3>Filter Tours</h3>
-            <button className="reset-btn-link" onClick={handleResetFilters} title="Reset all filters">
-              <RefreshCw size={14} />
-              <span>Reset</span>
-            </button>
+            <div className="sidebar-header-actions">
+              <button className="reset-btn-link" onClick={handleResetFilters} title="Reset all filters">
+                <RefreshCw size={14} />
+                <span>Reset</span>
+              </button>
+              <button className="mobile-filter-close" onClick={() => setShowFiltersMobile(false)} title="Close filters">
+                <X size={16} />
+              </button>
+            </div>
           </div>
+
 
           <div className="sidebar-filter-group">
             <label className="sidebar-label">Destination</label>

@@ -274,3 +274,53 @@
 .arrow-icon {
   transition: transform var(--transition-fast);
 }
+
+@media (max-width: 480px) {
+  .card-body {
+    padding: 16px;
+  }
+  .card-title {
+    font-size: 1.15rem;
+    height: auto;
+    min-height: 46px;
+    margin-bottom: 8px;
+  }
+  .card-description {
+    font-size: 0.8rem;
+    height: auto;
+    min-height: 54px;
+    margin-bottom: 16px;
+  }
+  .card-inclusions {
+    padding: 12px 0;
+    margin-bottom: 16px;
+    gap: 6px;
+  }
+  .card-image-wrapper {
+    height: 180px;
+  }
+  .card-badges {
+    top: 12px;
+    left: 12px;
+  }
+  .favorite-btn {
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+  }
+  .card-duration-badge {
+    bottom: 8px;
+    right: 12px;
+    font-size: 0.7rem;
+    padding: 3px 6px;
+  }
+  .current-price-val .value {
+    font-size: 1.3rem;
+  }
+  .card-action-btn {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+}
+
