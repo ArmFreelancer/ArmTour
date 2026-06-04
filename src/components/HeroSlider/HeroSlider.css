@@ -283,17 +283,89 @@
 /* Responsive Scaling */
 @media (max-width: 900px) {
   .hero-slider {
-    height: 75vh;
+    height: 80vh;
+    min-height: 520px;
+  }
+  .slide-content-container {
+    padding-top: 90px; /* clear fixed navbar */
+    align-items: flex-start; /* align card to top to prevent overlap with bottom dots */
   }
   .slide-card {
-    padding: 30px;
+    padding: 24px;
     margin: 0 16px;
-    max-width: 100%;
+    max-width: calc(100% - 32px);
+    background: rgba(6, 9, 19, 0.85); /* darker background for text readability */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--primary);
   }
   .slide-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  .slide-description {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .slide-meta-row {
+    gap: 16px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
   }
   .slider-arrow {
-    display: none; /* Hide arrows on small screens, rely on pagination dots and autoplay */
+    display: none; /* Hide arrows on small screens */
+  }
+  .slider-dots {
+    bottom: 24px; /* push dots slightly lower to prevent overlapping the card */
   }
 }
+
+@media (max-width: 480px) {
+  .hero-slider {
+    height: 85vh;
+    min-height: 500px;
+  }
+  .slide-content-container {
+    padding-top: 85px;
+  }
+  .slide-card {
+    padding: 16px;
+    margin: 0 12px;
+    max-width: calc(100% - 24px);
+  }
+  .slide-title {
+    font-size: 1.45rem;
+    margin-bottom: 8px;
+  }
+  .slide-description {
+    display: none; /* Hide description on mobile phones to save vertical space and prevent overlap */
+  }
+  .slide-meta-row {
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+  }
+  .slide-meta-item {
+    font-size: 0.8rem;
+  }
+  .price-val .value {
+    font-size: 1.8rem;
+  }
+  .price-val .currency {
+    font-size: 1.2rem;
+  }
+  .btn-explore {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  .slide-action-row {
+    gap: 12px;
+  }
+  .slider-dots {
+    bottom: 16px;
+  }
+}
+
