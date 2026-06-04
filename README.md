@@ -18,8 +18,9 @@
 <p align="center">
   <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=350&h=200&q=80" alt="Paris Tour" width="30%" />
   <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=350&h=200&q=80" alt="Kyoto Tour" width="30%" />
-  <img src="https://images.unsplash.com/photo-1627914949214-e0eb3e1cd095?auto=format&fit=crop&w=350&h=200&q=80" alt="Tatev Monastery" width="30%" />
+  <img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b?auto=format&fit=crop&w=350&h=200&q=80" alt="Khor Virap Armenia" width="30%" />
 </p>
+
 
 
 ---
